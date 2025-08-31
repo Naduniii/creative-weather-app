@@ -7,13 +7,12 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Video Background -->
+  
   <video autoplay muted loop id="bgVideo">
     <source src="videos/clear.mp4" type="video/mp4">
   </video>
 
   <div class="card">
-    <!-- Theme Switcher -->
     <div class="theme-switcher">
       <label for="theme">Theme: </label>
       <select id="theme">
@@ -24,18 +23,14 @@
       </select>
     </div>
 
-    <!-- Search -->
     <div class="search">
       <input type="text" placeholder="Enter City Name" spellcheck="false">
       <button><img src="images/search.png" alt="Search"></button>
     </div>
-
-    <!-- Error -->
     <div class="error">
       <p>⚠️ Invalid city name</p>
     </div>
 
-    <!-- Weather Info -->
     <div class="weather">
       <img src="images/clear.png" class="weather-icon" alt="Weather Icon">
       <h1 class="temp">22°C</h1>
@@ -66,7 +61,6 @@
         <a class="map" href="#" target="_blank">📍 View on Map</a>
       </div>
 
-      <!-- Forecast -->
       <div class="forecast">
         <h3>5-Day Forecast</h3>
         <div class="forecast-cards" id="forecast"></div>
