@@ -19,10 +19,12 @@ Video Backgrounds: Enhances visual appeal based on real-time weather.
 
 Demo
 🎥 Watch the weather come alive with videos and animations!
+
 https://Naduniii.github.io/creative-weather-app/
 
 How to Use
 Clone the repository:
+
 git clone https://github.com/Naduniii/creative-weather-app.git
 Open index.html in your browser.
 Enter a city name in the search box and hit the search button.
