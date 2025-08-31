@@ -15,28 +15,26 @@ async function checkWeather(city){
     document.querySelector(".weather").style.display = "none";
   } else {
     const data = await response.json();
-
-    // Basic Info
     document.querySelector(".city").innerHTML = `${data.name}, ${data.sys.country}`;
     document.querySelector(".temp").innerHTML = Math.round(data.main.temp) + "°C";
     document.querySelector(".feels-like").innerHTML = "Feels like: " + Math.round(data.main.feels_like) + "°C";
     document.querySelector(".humidity").innerHTML = data.main.humidity + "%";
     document.querySelector(".wind").innerHTML = data.wind.speed + " km/h";
 
-    // Date & Time
+
     let now = new Date();
     document.querySelector(".datetime").innerHTML = now.toLocaleString();
 
-    // Sunrise & Sunset
+
     let sunrise = new Date(data.sys.sunrise * 1000).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
     let sunset = new Date(data.sys.sunset * 1000).toLocaleTimeString([], {hour: '2-digit', minute:'2-digit'});
     document.querySelector(".sunrise").innerHTML = "🌅 Sunrise: " + sunrise;
     document.querySelector(".sunset").innerHTML = "🌇 Sunset: " + sunset;
 
-    // Map link
+
     document.querySelector(".map").href = `https://www.google.com/maps/search/?api=1&query=${data.coord.lat},${data.coord.lon}`;
 
-    // Set Weather Icon & Video
+
     let mainWeather = data.weather[0].main.toLowerCase();
     weatherIcon.src = `images/${mainWeather}.png`;
 
@@ -87,7 +85,7 @@ async function getForecast(city){
   });
 }
 
-// Event Listeners
+
 searchBtn.addEventListener("click", ()=> checkWeather(searchbox.value));
 
 themeSelect.addEventListener("change", () => {
